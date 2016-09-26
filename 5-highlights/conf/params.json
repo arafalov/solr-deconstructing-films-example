@@ -1,0 +1,21 @@
+{"params":{
+    "query":{
+      "defType":"edismax",
+      "q.alt":"*:*",
+      "rows":"10",
+      "fl":"*,score",
+      "":{"v":0}},
+    "facets":{
+      "facet":"on",
+      "facet.mincount":"1",
+      "facet.field":"genre",
+      "":{"v":1}},
+    "velocity":{
+      "wt":"velocity",
+      "v.template":"browse",
+      "v.layout":"layout",
+      "":{"v":0}},
+    "browse":{
+      "hl":"on",
+      "hl.fl":"name",
+      "":{"v":0}}}}

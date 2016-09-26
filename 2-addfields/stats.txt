@@ -1,0 +1,11 @@
+File count:
+41 .txt
+3 .xml
+1 .json
+1 ./managed-schema
+
+Sizes:
+managed-schema: 479 lines
+solrconfig.xml: 1482 lines
+params.json: 19 lines
+
