@@ -5,7 +5,7 @@ File count:
 1 ./managed-schema
 
 Sizes:
-managed-schema: 34 lines
+managed-schema: 33 lines
 solrconfig.xml: 278 lines
 params.json: 20 lines
 
