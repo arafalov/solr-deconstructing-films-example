@@ -9,15 +9,8 @@
   <fieldType name="tdates" class="solr.TrieDateField" positionIncrementGap="0" docValues="true" multiValued="true" precisionStep="6"/>
   <fieldType name="tdoubles" class="solr.TrieDoubleField" positionIncrementGap="0" docValues="true" multiValued="true" precisionStep="8"/>
   <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
-    <analyzer type="index">
+    <analyzer>
       <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
-      <filter class="solr.LowerCaseFilterFactory"/>
-    </analyzer>
-    <analyzer type="query">
-      <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
-      <filter class="solr.SynonymFilterFactory" expand="true" ignoreCase="true" synonyms="synonyms.txt"/>
       <filter class="solr.LowerCaseFilterFactory"/>
     </analyzer>
   </fieldType>
