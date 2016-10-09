@@ -69,7 +69,7 @@
       <str name="echoParams">explicit</str>
     </lst>
   </requestHandler>
-  <initParams path="/update/**,/query,/select,/tvrh,/elevate,/spell,/browse">
+  <initParams path="/update/**,/query,/select,/browse">
     <lst name="defaults">
       <str name="df">_text_</str>
     </lst>
@@ -93,69 +93,6 @@
       <str name="echoParams">explicit</str>
       <str name="echoHandler">true</str>
     </lst>
-  </requestHandler>
-  <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
-    <str name="queryAnalyzerFieldType">text_general</str>
-    <lst name="spellchecker">
-      <str name="name">default</str>
-      <str name="field">_text_</str>
-      <str name="classname">solr.DirectSolrSpellChecker</str>
-      <str name="distanceMeasure">internal</str>
-      <float name="accuracy">0.5</float>
-      <int name="maxEdits">2</int>
-      <int name="minPrefix">1</int>
-      <int name="maxInspections">5</int>
-      <int name="minQueryLength">4</int>
-      <float name="maxQueryFrequency">0.01</float>
-    </lst>
-  </searchComponent>
-  <requestHandler name="/spell" class="solr.SearchHandler" startup="lazy">
-    <lst name="defaults">
-      <str name="spellcheck.dictionary">default</str>
-      <str name="spellcheck">on</str>
-      <str name="spellcheck.extendedResults">true</str>
-      <str name="spellcheck.count">10</str>
-      <str name="spellcheck.alternativeTermCount">5</str>
-      <str name="spellcheck.maxResultsForSuggest">5</str>
-      <str name="spellcheck.collate">true</str>
-      <str name="spellcheck.collateExtendedResults">true</str>
-      <str name="spellcheck.maxCollationTries">10</str>
-      <str name="spellcheck.maxCollations">5</str>
-    </lst>
-    <arr name="last-components">
-      <str>spellcheck</str>
-    </arr>
-  </requestHandler>
-  <searchComponent name="tvComponent" class="solr.TermVectorComponent"/>
-  <requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
-    <lst name="defaults">
-      <bool name="tv">true</bool>
-    </lst>
-    <arr name="last-components">
-      <str>tvComponent</str>
-    </arr>
-  </requestHandler>
-  <searchComponent name="terms" class="solr.TermsComponent"/>
-  <requestHandler name="/terms" class="solr.SearchHandler" startup="lazy">
-    <lst name="defaults">
-      <bool name="terms">true</bool>
-      <bool name="distrib">false</bool>
-    </lst>
-    <arr name="components">
-      <str>terms</str>
-    </arr>
-  </requestHandler>
-  <searchComponent name="elevator" class="solr.QueryElevationComponent">
-    <str name="queryFieldType">string</str>
-    <str name="config-file">elevate.xml</str>
-  </searchComponent>
-  <requestHandler name="/elevate" class="solr.SearchHandler" startup="lazy">
-    <lst name="defaults">
-      <str name="echoParams">explicit</str>
-    </lst>
-    <arr name="last-components">
-      <str>elevator</str>
-    </arr>
   </requestHandler>
   <updateRequestProcessorChain name="add-unknown-fields-to-the-schema">
     <processor class="solr.UUIDUpdateProcessorFactory"/>

@@ -1,24 +1,24 @@
 File count:
 0 .txt
-2 .xml
+1 .xml
 1 .json
 1 ./managed-schema
 
 Sizes:
 managed-schema: 26 lines
-solrconfig.xml: 226 lines
+solrconfig.xml: 163 lines
 params.json: 20 lines
 
 solrconfig.xml breakdown:
 55:<updateRequestProcessorChain name="add-unknown-fields-to-the-schema">
 (removed) 52:<searchComponent class="solr.HighlightComponent" name="highlight">
 18:<query>
-17:<requestHandler name="/spell" class="solr.SearchHandler" startup="lazy">
-15:<searchComponent name="spellcheck" class="solr.SpellCheckComponent">
+(removed) 17:<requestHandler name="/spell" class="solr.SearchHandler" startup="lazy">
+(removed) 15:<searchComponent name="spellcheck" class="solr.SpellCheckComponent">
 13:<updateHandler class="solr.DirectUpdateHandler2">
-9:<requestHandler name="/terms" class="solr.SearchHandler" startup="lazy">
-8:<requestHandler name="/elevate" class="solr.SearchHandler" startup="lazy">
-8:<requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
+(removed) 9:<requestHandler name="/terms" class="solr.SearchHandler" startup="lazy">
+(removed) 8:<requestHandler name="/elevate" class="solr.SearchHandler" startup="lazy">
+(removed) 8:<requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
 7:<requestHandler name="/update/extract" startup="lazy" class="solr.extraction.ExtractingRequestHandler">
 7:<requestHandler name="/query" class="solr.SearchHandler">
 6:<requestHandler name="/debug/dump" class="solr.DumpRequestHandler">
@@ -27,13 +27,13 @@ solrconfig.xml breakdown:
 5:<initParams path="/update/**">
 5:<initParams path="/update/**,/query,/select,/tvrh,/elevate,/spell,/browse">
 5:<requestHandler name="/browse" class="solr.SearchHandler" useParams="query,facets,velocity,browse">
-4:<searchComponent name="elevator" class="solr.QueryElevationComponent">
+(removed) 4:<searchComponent name="elevator" class="solr.QueryElevationComponent">
 4:<requestDispatcher handleSelect="false">
 3:<queryResponseWriter name="xslt" class="solr.XSLTResponseWriter">
 3:<queryResponseWriter name="json" class="solr.JSONResponseWriter">
 3:<indexConfig>
-1:<searchComponent name="terms" class="solr.TermsComponent"/>
-1:<searchComponent name="tvComponent" class="solr.TermVectorComponent"/>
+(removed) 1:<searchComponent name="terms" class="solr.TermsComponent"/>
+(removed) 1:<searchComponent name="tvComponent" class="solr.TermVectorComponent"/>
 1:<requestHandler name="/analysis/document" class="solr.DocumentAnalysisRequestHandler" startup="lazy"/>
 1:<requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler"/>
 1:<jmx/>
