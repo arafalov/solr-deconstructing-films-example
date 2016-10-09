@@ -6,7 +6,7 @@ File count:
 
 Sizes:
 managed-schema: 26 lines
-solrconfig.xml: 145 lines
+solrconfig.xml: 132 lines
 params.json: 20 lines
 
 solrconfig.xml breakdown:
@@ -15,7 +15,7 @@ solrconfig.xml breakdown:
 (removed) 18:<query>
 (removed) 17:<requestHandler name="/spell" class="solr.SearchHandler" startup="lazy">
 (removed) 15:<searchComponent name="spellcheck" class="solr.SpellCheckComponent">
-13:<updateHandler class="solr.DirectUpdateHandler2">
+(removed) 13:<updateHandler class="solr.DirectUpdateHandler2">
 (removed) 9:<requestHandler name="/terms" class="solr.SearchHandler" startup="lazy">
 (removed) 8:<requestHandler name="/elevate" class="solr.SearchHandler" startup="lazy">
 (removed) 8:<requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
