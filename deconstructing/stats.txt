@@ -6,13 +6,13 @@ File count:
 
 Sizes:
 managed-schema: 26 lines
-solrconfig.xml: 163 lines
+solrconfig.xml: 145 lines
 params.json: 20 lines
 
 solrconfig.xml breakdown:
 55:<updateRequestProcessorChain name="add-unknown-fields-to-the-schema">
 (removed) 52:<searchComponent class="solr.HighlightComponent" name="highlight">
-18:<query>
+(removed) 18:<query>
 (removed) 17:<requestHandler name="/spell" class="solr.SearchHandler" startup="lazy">
 (removed) 15:<searchComponent name="spellcheck" class="solr.SpellCheckComponent">
 13:<updateHandler class="solr.DirectUpdateHandler2">
